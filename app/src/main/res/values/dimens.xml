@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- home screen HSE space management -->
+    <dimen name="text_view_padding">16dp</dimen>
+
+    <!-- exhibitor list item space management -->
+    <dimen name="list_image_margin">5dp</dimen>
+    <dimen name="circle_padding">10dp</dimen>
+    <dimen name="exhibitor_left_imageview_padding">5dp</dimen>
+    <dimen name="exhibitor_right_imageview_padding">5dp</dimen>
+    <dimen name="exhibitor_header_textsize">16sp</dimen>
+    <dimen name="exhibitor_subtitle_textsize">12sp</dimen>
+    <dimen name="exhibitor_smalltext_textsize">10sp</dimen>
+    <dimen name="exhibitor_textview_top_padding">2dp</dimen>
+    <dimen name="exhibitor_textview_left_padding">8dp</dimen>
+    <dimen name="exhibitor_textview_right_padding">2dp</dimen>
+    <dimen name="exhibitor_textview_bottom_padding">2dp</dimen>
+
+    <!-- dash board space management -->
+    <dimen name="dashboard_facebookbutton_margin_left">10dp</dimen>
+    <dimen name="dashboard_marquee_textsize">12sp</dimen>
+    <dimen name="dashboard_gridadapter_textsize">12sp</dimen>
+    <dimen name="dashboard_margin_bottom">24dp</dimen>
+    <dimen name="dashboard_margin_image">8dp</dimen>
+
+    <!-- webview space management -->
+    <dimen name="webview_progressbar_height">20dp</dimen>
+
+    <!-- schedule list page space management -->
+    <dimen name="left_padding_for_start_time">20dp</dimen>
+    <dimen name="schedule_name_text_size">16sp</dimen>
+    <dimen name="schedule_date_time_text_size">12sp</dimen>
+    <dimen name="schedule_desc_text_size">12sp</dimen>
+
+</resources>

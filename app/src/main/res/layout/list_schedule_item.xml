@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha="0.80"
+    android:background="@color/_white"
+    android:orientation="vertical"
+    android:paddingBottom="5dp" >
+
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/_purple"
+        android:paddingLeft="@dimen/left_padding_for_start_time"
+        android:text="7:00 AM"
+        android:textColor="@color/_white"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <ImageView
+            android:id="@+id/left_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="5dp"
+            android:src="@drawable/notification" />
+
+        <ImageView
+            android:id="@+id/aad_to_calender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/arrow" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/aad_to_calender"
+            android:layout_toRightOf="@id/left_image"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/schedule_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="SaturnMobi private limited"
+                android:textColor="@color/_black"
+                android:textSize="@dimen/schedule_name_text_size" />
+
+            <TextView
+                android:id="@+id/schedule_date_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="SaturnMobi private limited"
+                android:textColor="#2f2d2d"
+                android:textSize="@dimen/schedule_date_time_text_size" />
+
+            <TextView
+                android:id="@+id/schedule_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="SaturnMobi private limited"
+                android:textColor="#3e3a3a"
+                android:textSize="@dimen/schedule_desc_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

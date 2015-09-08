@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="vpi__background_holo_dark">#1184b3</color>
+    <color name="vpi__background_holo_light">#1184b3</color>
+    <color name="vpi__bright_foreground_holo_dark">@color/vpi__background_holo_light</color>
+    <color name="vpi__bright_foreground_holo_light">@color/vpi__background_holo_dark</color>
+    <color name="grey">#DFDFDF</color>
+    <color name="light_grey">#DDDDDD</color>
+    <color name="gray_1">#C0C0C0</color>
+    <color name="dark_slate_gray">#2F4F4F</color>
+    <color name="gray_2">#AFAFAF</color>
+
+</resources>

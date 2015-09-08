@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Name *"
+        android:padding="10dp" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Email Id *"
+        android:padding="10dp" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Contact Number (Optional)"
+        android:inputType="phone"
+        android:padding="10dp" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Company (Optional)"
+        android:padding="10dp" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ractangle_blue_global_she_theme"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Send Meeting Request"
+        android:textColor="@color/_white"
+        android:textSize="18sp" />
+
+</LinearLayout>

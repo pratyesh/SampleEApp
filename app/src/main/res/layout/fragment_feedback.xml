@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/feedbackScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10dip"
+            android:text="How do you find this app?"
+            android:textColor="#ff0000"
+            android:textSize="22dip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/helpText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Helpful"
+                    android:textColor="#000000"
+                    android:textSize="18dip" >
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/helpText"
+                    android:text="Was this app helpful?"
+                    android:textColor="#000000"
+                    android:textSize="11dip" >
+                </TextView>
+
+                <RatingBar
+                    android:id="@+id/helpRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:rating="3.5" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dip" >
+
+                <TextView
+                    android:id="@+id/useText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="3dip"
+                    android:text="Ease of Use"
+                    android:textColor="#000000"
+                    android:textSize="18dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/useText"
+                    android:text="Was this app useful?"
+                    android:textColor="#000000"
+                    android:textSize="11dip" >
+                </TextView>
+
+                <RatingBar
+                    android:id="@+id/useRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:rating="3.5" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/feedback"
+                android:layout_width="match_parent"
+                android:layout_height="100dip"
+                android:layout_gravity="top"
+                android:layout_marginTop="10dip"
+                android:hint="Write your feedback (Optional)"
+                android:padding="10dip"
+                android:singleLine="false" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:hint="Email Address (Optional)"
+                android:padding="10dip"
+                android:singleLine="false" />
+
+            <Button
+                android:id="@+id/feedbackBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/blue_border_gradient_box"
+                android:text="Submit"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

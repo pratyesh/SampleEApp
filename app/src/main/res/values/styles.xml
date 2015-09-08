@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light"></style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:actionBarSize">40dp</item>
+        <item name="actionBarSize">40dp</item>
+    </style>
+
+</resources>

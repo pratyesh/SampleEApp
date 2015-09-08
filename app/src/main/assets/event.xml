@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event title="" icon="LED" browserBackButtonTitle= "AIRCARGO App" navBarColor = "#7a3218">
+    
+    
+    <screen id = "0" hasTitle="false" title = "" titlebackgroundImage = "" titleTextSize="0" titleColor="#000000" titleBackgroundColor = "#1244ad" backgroundColor = "" backgroundImg = "splash" templateId = "0" hasMenu="false">
+        
+		<splash time="3000" action = "100" hasUrl="true" noOfUrls="7">
+            <downLoadUrl name="twitterUrl">http://twitter.com/statmedianews</downLoadUrl>
+		</splash>
+	</screen>
+    
+    
+    <screen id = "100" hasTitle="true" title = "LED Expo Thailand 2015" titlebackgroundImage = "" titleTextSize="14" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "" backgroundImg = "screen" templateId = "10" hasMenu="false" hasFacebookButton = "0">
+        
+		<grid-view gridBackgroundImg="" noOfGridRow = "3" noOfGridCol="3" verticalSpacing="10" horizontalSpacing="10" gravity="bottom">	
+			
+            <grid-row >
+				<grid-col text="The Event" action = "1001" textColor = "#000000" image="event"></grid-col>
+				<grid-col text="Exhibitors" action = "1002" textColor = "#000000" image="conference"></grid-col>
+				<grid-col text="LED Summit" action = "1003" textColor = "#000000" image="exhibitors"></grid-col>
+            </grid-row>
+            
+            <grid-row >
+				<grid-col text="Glimpses" action = "1004" textColor = "#000000" image="speaker"></grid-col>
+				<grid-col text="My Zone" action = "1005" textColor = "#000000" image="workshop"></grid-col>
+                <grid-col text="Registration" action = "1006" textColor = "#000000" image="registration"></grid-col>
+            </grid-row>
+            
+            <grid-row >
+				<grid-col text="Camera" action = "1007" textColor = "#000000" image="sponsor"></grid-col>
+				<grid-col text="Venue" action = "1008" textColor = "#000000" image="myzone"></grid-col>
+				<grid-col text="More" action = "1009" textColor = "#000000" image="more"></grid-col>
+            </grid-row>
+            
+		</grid-view>	
+		
+		  <header-social_networking isAvailable = "true" url = "https://www.facebook.com/LEDexpoThailand" action="101">		     
+		  </header-social_networking>
+		  <header-social_networking isAvailable = "true" url = "http://www.linkedin.com/groups/LED-Expo-Thailand-4893346" action="102">		     
+		  </header-social_networking>
+		  <header-social_networking isAvailable = "true" url = "https://twitter.com/LEDexpoThailand" action="103">		     
+		  </header-social_networking>
+	</screen>
+    
+    <screen id = "101" hasTitle="true" title = "Facebook" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>
+			<url>https://www.facebook.com/LEDexpoThailand</url>
+		</web-view>
+    </screen>
+    
+    <screen id = "102" hasTitle="true" title = "LinkedIn" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	
+			<url>http://www.linkedin.com/groups/LED-Expo-Thailand-4893346</url>
+		</web-view>
+    </screen>
+    
+    <screen id = "103" hasTitle="true" title = "Twitter" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>
+			<url>https://twitter.com/LEDexpoThailand</url>
+		</web-view>
+    </screen>
+    
+	
+	
+    <!-- *********** The Event Start ********** -->
+
+	
+     <screen id = "1001" hasTitle="true" title = "The Event" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#ffffff" backgroundImg = "" templateId = "17" hasMenu="false" hasNavigationBar="1" hasFacebookButton="1"  >
+        
+        <list-view noOfListRow = "8" verticalSpacing="1" horizontalSpacing="1" listBackgroundColor="#FFFFFF">
+            <section title = "" noOfRows = "5">
+                
+                <list-row backgroundColor = "#ffffff" action = "10011" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="About Show And Why Thailand" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10012" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Fact Sheet" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10013" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Host Organisation" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>                
+                <list-row backgroundColor = "#ffffff" action = "10014" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Organiser" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10015" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Show Sponsors" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10016" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Media Partners" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>                
+                <list-row backgroundColor = "#ffffff" action = "10017" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Supporting Associations" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>               
+                <list-row backgroundColor = "#ffffff" action = "10018" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Contact Us" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10019" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Show Schedule" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "100110" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Hotels" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+			</section>
+		</list-view>
+    </screen>
+    
+     <screen id = "10011" hasTitle="true" title = "About Show And Why Thailand" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/about-led-expo-thailand.html</url>
+		</web-view>
+    </screen>
+    
+    <screen id = "10012" hasTitle="true" title = "Fact Sheet" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/fact-sheet.html</url>
+		</web-view>
+    </screen>
+      
+	   <screen id = "10013" hasTitle="true" title = "Host Organisation" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/host-organisation.html</url>
+		</web-view>
+    </screen>
+	 <screen id = "10014" hasTitle="true" title = "Organiser" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/organisers.html</url>
+		</web-view>
+    </screen>
+	 
+     <screen id = "10015" hasTitle="true" title = "Show Sponsors" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+         <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+             <navigation-item type = "1" action = "" />
+         </navigation-bar>
+         <web-view>	BrowserView
+             <url>html/show-sponsors.html</url>
+         </web-view>
+     </screen>
+	 <screen id = "10016" hasTitle="true" title = "Media Partners" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/media-partners.html</url>
+		</web-view>
+    </screen>
+	<screen id = "10017" hasTitle="true" title = "Supporting Associations" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/supporting-associations.html</url>
+		</web-view>
+    </screen>
+	 <screen id = "10018" hasTitle="true" title = "Contact Us" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/contact-us.html</url>
+		</web-view>
+    </screen>
+	 <screen id = "10019" hasTitle="true" title = "Show Schedule" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/show-schedule.html</url>
+		</web-view>
+    </screen>	  
+	   <screen id = "100110" hasTitle="true" title = "Hotels" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/hotels.html</url>
+		</web-view>
+    </screen>
+	  
+	  
+	  
+	  
+	  
+      <!-- *********** The Event End ********** -->
+	  
+	  
+	  
+	  
+    
+	  
+      <!-- *********** Exhibitors Start ********** -->
+
+
+      
+      <screen id = "1002" hasTitle="true" title = "Exhibitors" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#ffffff" backgroundImg = "" templateId = "17" hasMenu="false" hasNavigationBar = "1" hasAdBanner="1">
+          <navigation-bar title="" titleColor="#ffffff" backgroundImage="" backgroundColor = "#009BD9" backButtonImage="arrow" backButtonTitle = ""  backButtonTitleColor = "">
+          </navigation-bar>
+          
+          <list-view noOfListRow = "5" verticalSpacing="1" horizontalSpacing="1" listBackgroundColor="#FFFFFF">
+              <section title = "" noOfRows = "5">
+                  <list-row backgroundColor = "#ffffff" action = "10021" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Exhibit Profile" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1" cellStyle="1">
+                  </list-row>
+                  <list-row backgroundColor = "#ffffff" action = "10022" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Floor Plan" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1" cellStyle="1">
+                  </list-row>
+                  <list-row backgroundColor = "#ffffff" action = "10023" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Exhibitor List" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1" cellStyle="1">
+                  </list-row>
+              </section>
+          </list-view>
+      </screen>
+      
+	  
+      <screen id = "10021" hasTitle="true" title = "Exhibit Profile" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1" hasAdBanner="1">
+          <navigation-bar title="" titleColor="#ffffff" backgroundImage="" backgroundColor = "#009BD9" backButtonImage="arrow" backButtonTitle = ""  backButtonTitleColor = "">
+          </navigation-bar>
+          <web-view hasLocalUrl="0">
+              <url>html/exhibit-profile.html</url>
+          </web-view>
+      </screen>
+     <!--  <screen id = "10022" hasTitle="true" title = "Floor Plan" titlebackgroundImage = "" titleTextSize="0" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "23" hasMenu="false" hasNavigationBar = "1">
+          <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+              <navigation-item type = "1" action = "" />
+          </navigation-bar>
+          <venue-map image="floor_plan.png" height="0" width="0" gravity="left"/>
+      </screen> -->
+	  
+       <screen id = "10022" hasTitle="true" title = "Floor Plan" titlebackgroundImage = "" titleTextSize="0" titleColor="#FFFFFF" titleBackgroundColor = "#7a3218" backgroundColor = "#dedede" backgroundImg = "" templateId = "30" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+            <!--<navigation-item type = "1" action = "" />-->
+        </navigation-bar>
+        <list-view noOfListRow="1" verticalSpacing="1" horizontalSpacing="1" listBackgroundColor="#FFFFFF">
+		    <list-row backgroundColor="#ffffff" action="8091" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="text" textColor="#000000" textSize="18" textStyle="Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20">
+		    </list-row>
+	    </list-view>
+    </screen> 
+    
+       <screen id = "8091" hasTitle="true" title = "Floor Plan" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#7a3218" backgroundColor = "#dedede" backgroundImg = "" templateId = "23" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#B82326" backButtonTitle = "Back">
+			<!--<navigation-item type = "1" action = "" />-->
+		</navigation-bar>
+    </screen>
+	  
+      <screen id = "10023" hasTitle="true" title = "Exhibitor List" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#ffffff" backgroundImg = "" templateId = "26" hasMenu="false" hasNavigationBar = "1">
+          <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+          </navigation-bar>
+          
+          <mutliline-list-view listBackgroundColor="" listBackgroundImg="" noOfListRow = "24" verticalSpacing="1" horizontalSpacing="1" headerTextColor = "#7a3218"
+              headerTextSize = "16sp" headerTextStyle="bold" subTitleTextColor="#000000" subTitleTextSize = "12sp" subTitleTextStyle = "normal" smallTextColor = "#000000"
+              smallTextSize = "10sp" smallTextStyle = "normal" action = "2200" hasSearch = "true" >
+          </mutliline-list-view>
+      </screen>
+      
+      
+      
+	  
+	  
+      <!-- *********** Exhibitors end ********** -->
+      
+      
+      
+      <!-- *********** LED Summit Start ********** -->
+      
+    
+	  
+    <screen id = "1003" hasTitle="true" title = "LED Summit" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#ffffff" backgroundImg = "" templateId = "17" hasMenu="false" hasNavigationBar="1" hasFacebookButton="1"  >
+        
+        <list-view noOfListRow = "8" verticalSpacing="1" horizontalSpacing="1" listBackgroundColor="#FFFFFF">
+            <section title = "" noOfRows = "5">
+                
+                <list-row backgroundColor = "#ffffff" action = "10031" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Conference Agenda" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10032" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Speakers" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+			</section>
+		</list-view>
+    </screen>
+    
+    
+    <screen id = "10031" hasTitle="true" title = "Conference Agenda" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#ffffff" backgroundImg = "default_background" templateId = "12" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+            <!--<navigation-item type = "1" action = "" />-->
+        </navigation-bar>
+        
+        <calendar-view eventHeaderBackgroundColor = "#fff8de" eventHeaderBackgroundImg="" eventHeaderTextColor = "#282a30" eventHeaderTextSize="20" eventHeaderStartDate="06-12-2011 10:00:00"
+            eventDescriptionBackgroundColor = "#ffffff" eventDescriptionbackgroundImg="" eventDescriptionTextColor = "#000000" eventDescriptionTextSize="15" eventDescriptionImageRight="plus" eventDescriptionImageRightHeight="30" eventDescriptionImageRightWidth="30" groupName="led">
+        </calendar-view>
+    </screen>
+    
+    <screen id = "10032" hasTitle="true" title = "Speakers" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#ffffff" backgroundImg = "" templateId = "37" hasMenu="false" hasNavigationBar = "1">
+        
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+        </navigation-bar>
+		<mutliline-list-view listBackgroundColor="#FFFFFF" listBackgroundImg="" noOfListRow = "24" verticalSpacing="1" horizontalSpacing="1" headerTextColor = "#7a3218"
+            headerTextSize = "16sp" headerTextStyle="bold" subTitleTextColor="#000000" subTitleTextSize = "12sp" subTitleTextStyle = "normal" smallTextColor = "#000000"
+            smallTextSize = "10sp" smallTextStyle = "normal" action = "2201" hasSearch = "true" >
+        </mutliline-list-view>
+    </screen>
+    
+    
+    <!-- *********** LED Summit End ********** -->
+    
+    
+    
+    
+    <!-- ***********  Glimpses Start ********** -->
+    
+    
+    
+    <screen id = "1004" hasTitle="true" title = "LED Summit" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#ffffff" backgroundImg = "" templateId = "17" hasMenu="false" hasNavigationBar="1" hasFacebookButton="1"  >
+        
+        <list-view noOfListRow = "8" verticalSpacing="1" horizontalSpacing="1" listBackgroundColor="#FFFFFF">
+            <section title = "" noOfRows = "5">
+                
+                <list-row backgroundColor = "#ffffff" action = "10041" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="VIDEO of 2014 edition" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10042" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="IMAGE GALLERY" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+			</section>
+		</list-view>
+    </screen>
+    
+    <screen id = "10041" hasTitle="true" title = "VIDEO of 2014 edition" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "16" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>https://www.youtube.com/v/8WPqJKltGzY</url>
+		</web-view>
+    </screen>
+    
+    <screen id = "10042"  hasTitle="true" title = "Photo Gallery" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#ffffff" backgroundImg = "" templateId = "18" hasMenu="false" hasNavigationBar = "1" hasTabBar = "1" >
+		
+        <navigation-bar color = "#B82326" backButtonTitle = "Back">
+            <!--<navigation-item type = "1" action = "" />-->
+        </navigation-bar>
+        
+        <list-view noOfListRow="1" verticalSpacing="1" horizontalSpacing="1" listBackgroundColor="#FFFFFF">
+		    <list-row backgroundColor="#ffffff" action="602" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="text" textColor="#000000" textSize="18" textStyle="Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20">
+		    </list-row>
+	    </list-view>
+	    
+        <image-gallery>
+            <!-- Image Gallery -->
+        </image-gallery>
+		
+    </screen>
+
+    <screen id="601" hasTitle="true" title="Gallery In List" titlebackgroundImage="" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor="" backgroundImg="" templateId="19" hasMenu="false">
+	    <image-gallery>
+            <!-- Image Gallery -->
+	    </image-gallery>
+    </screen> 
+   
+    
+    <screen id="602" hasTitle="true" title="Gallery" titlebackgroundImage="" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor="" backgroundImg="" templateId="27" hasMenu="false">
+	    <image-gallery>
+            <!-- Image Gallery -->
+	    </image-gallery>
+    </screen>
+    
+    
+    <!-- ***********  Glimpses End ********** -->
+
+
+    
+    
+    <!-- *********** MY Zone Start ********** -->
+    
+    
+    
+    <screen id = "1005" hasTitle="true" title = "My Zone" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#ffffff" backgroundImg = "" templateId = "17" hasMenu="false" hasNavigationBar = "1" >
+        
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<!--<navigation-item type = "1" action = "" />-->
+		</navigation-bar>
+        
+		<list-view noOfListRow = "2" verticalSpacing="1" horizontalSpacing="1" listBackgroundColor="#FFFFFF">
+			<section title = "" noOfRows = "2">
+                <list-row backgroundColor = "#ffffff" action = "10051" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Favorites" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10052" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Notes" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10053" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Notification" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+            </section>
+		</list-view>
+    </screen>
+    
+    <screen id = "10051" hasTitle="true" title = "Favorites" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "24" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<!--<navigation-item type = "1" action = "" />-->
+		</navigation-bar>
+		<segment-view backgroundImage="" backgroundColor="" >
+            <segment text="Exhibitor" textColor="#ffffff" action="10021">
+            </segment>
+            <segment text="Speaker" textColor="#ffffff" action="100341">
+            </segment>
+        </segment-view>
+        <mutliline-list-view listBackgroundColor="" listBackgroundImg="" noOfListRow = "24" verticalSpacing="1" horizontalSpacing="1" headerTextColor = "#7a3218"
+            headerTextSize = "16sp" headerTextStyle="bold" subTitleTextColor="#000000" subTitleTextSize = "12sp" subTitleTextStyle = "normal" smallTextColor = "#000000"
+            smallTextSize = "10sp" smallTextStyle = "normal" action = "2200" hasSearch = "true" >
+        </mutliline-list-view>
+        
+        <mutliline-list-view listBackgroundColor="" listBackgroundImg="" noOfListRow = "24" verticalSpacing="1" horizontalSpacing="1" headerTextColor = "#7a3218"
+            headerTextSize = "16sp" headerTextStyle="bold" subTitleTextColor="#000000" subTitleTextSize = "12sp" subTitleTextStyle = "normal" smallTextColor = "#000000"
+            smallTextSize = "10sp" smallTextStyle = "normal" action = "2201" hasSearch = "true" >
+        </mutliline-list-view>
+        
+    </screen>
+    
+    <screen id = "10052" hasTitle="true" title = "Notes" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "25" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<!--<navigation-item type = "1" action = "" />-->
+		</navigation-bar>
+		
+        <segment-view backgroundImage="" backgroundColor="" >
+            <segment text="Exhibitor" textColor="#ffffff" action="10021">
+            </segment>
+            <segment text="Speaker" textColor="#ffffff" action="100341">
+            </segment>
+        </segment-view>
+        
+		<mutliline-list-view listBackgroundColor="" listBackgroundImg="" noOfListRow = "24" verticalSpacing="1" horizontalSpacing="1" headerTextColor = "#7a3218"
+            headerTextSize = "16sp" headerTextStyle="bold" subTitleTextColor="#000000" subTitleTextSize = "12sp" subTitleTextStyle = "normal" smallTextColor = "#000000"
+            smallTextSize = "10sp" smallTextStyle = "normal" action = "2200" hasSearch = "true" >
+        </mutliline-list-view>
+        
+        <mutliline-list-view listBackgroundColor="" listBackgroundImg="" noOfListRow = "24" verticalSpacing="1" horizontalSpacing="1" headerTextColor = "#7a3218"
+            headerTextSize = "16sp" headerTextStyle="bold" subTitleTextColor="#000000" subTitleTextSize = "12sp" subTitleTextStyle = "normal" smallTextColor = "#000000"
+            smallTextSize = "10sp" smallTextStyle = "normal" action = "2201" hasSearch = "true" >
+        </mutliline-list-view>
+    </screen>
+    
+    <screen id = "10053" hasTitle="true" title = "Notification" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#ffffff" backgroundImg = "" templateId = "22" hasMenu="false" hasNavigationBar = "1">
+        
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+        </navigation-bar>
+		<mutliline-list-view listBackgroundColor="#FFFFFF" listBackgroundImg="" noOfListRow = "24" verticalSpacing="1" horizontalSpacing="1" headerTextColor = "#7a3218"
+            headerTextSize = "16sp" headerTextStyle="bold" subTitleTextColor="#000000" subTitleTextSize = "12sp" subTitleTextStyle = "normal" smallTextColor = "#000000"
+            smallTextSize = "10sp" smallTextStyle = "normal" action = "2201" hasSearch = "true" >
+        </mutliline-list-view>
+    </screen>
+    
+    
+    <!-- *********** MY Zone End ********** -->
+
+
+    
+    
+    <!-- *********** Registration Start ********** -->
+
+
+    
+    <screen id = "1006" hasTitle="true" title = "Registration" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#ffffff" backgroundImg = "" templateId = "17" hasMenu="false" hasNavigationBar="1" hasFacebookButton="1"  >
+        
+        <list-view noOfListRow = "8" verticalSpacing="1" horizontalSpacing="1" listBackgroundColor="#FFFFFF">
+            <section title = "" noOfRows = "5">
+                
+                <list-row backgroundColor = "#ffffff" action = "10061" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Exhibitor Registration" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10062" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Visitor Registration" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+			</section>
+		</list-view>
+    </screen>
+    
+    <screen id = "10061" hasTitle="true" title = "Exhibitor Registration" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>http://app.saturnmobi.com/registration/registration.php</url>
+		</web-view>
+    </screen>
+    
+    <screen id = "10062" hasTitle="true" title = "Visitor Registration" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>http://app.saturnmobi.com/registration/vregistration.php</url>
+		</web-view>
+    </screen>
+    
+    <!-- *********** Registration End ********** -->
+
+
+
+
+    <!-- *********** Capture  Start ********** -->
+
+<screen id="1007" hasTitle="false" title="Camera" titlebackgroundImage="" titleTextSize="14" titleColor="#FFFFFF" titleBackgroundColor="#1244ad" backgroundColor="#dedede" backgroundImg="" templateId="13" hasMenu="false" hasNavigationBar="1" hasTabBar="1">
+    <navigation-bar color="#B82326" backButtonTitle="Back">
+        <!--<navigation-item type = "1" action = "" />-->
+    </navigation-bar>
+    <camera-view>
+        <image url="logo" height="100" width="100" gravity="left"/>
+        <overlay-image>Capture.png</overlay-image>
+        <button type="SAVE" data="" width="200" height="55" image="button" action="230000" textColor="#ff0000" paddingTop="10" gravity="">Save to Photo Gallery</button>
+        <button type="FACEBOOK" data="" width="200" height="55" image="button" action="230000" textColor="#ff0000" paddingTop="10" gravity="">Post to Facebook</button>
+        <button type="EMAIL" data="" width="200" height="55" image="button" action="230000" textColor="#ff0000" paddingTop="10" gravity="">Email</button>
+    </camera-view>
+</screen>
+
+    
+    <!-- *********** Capture End ********** -->
+
+
+
+
+
+    <!-- *********** Venue Start ********** -->
+
+
+<screen id = "1008" hasTitle="true" title = "Venue" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "29" hasMenu="false" hasNavigationBar = "1">
+    <navigation-bar color = "#B82326" backButtonTitle = "Back">
+        <!--<navigation-item type = "1" action = "" />-->
+    </navigation-bar>
+    <web-view>	<!-- BrowserView -->
+        <url>html/venue.html</url>
+    </web-view>
+</screen>
+
+
+
+
+    <!-- *********** Venue End ********** -->
+
+
+<!-- *********** Show Highlights Start ********** -->
+
+
+
+    
+    
+    
+    <screen id = "1009" hasTitle="true" title = "Highlights" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#ffffff" backgroundImg = "" templateId = "17" hasMenu="false" hasNavigationBar="1" hasFacebookButton="1"  >
+        
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<!--<navigation-item type = "1" action = "" />-->
+		</navigation-bar>
+        
+		<list-view noOfListRow = "8" verticalSpacing="1" horizontalSpacing="1" listBackgroundColor="#FFFFFF">
+            <section title = "" noOfRows = "5">
+                
+                <list-row backgroundColor = "#ffffff" action = "10091" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="LED Application Zones: Mock Up Rooms" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10092" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Modern Lamp Design Contest" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10093" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Decorative Lighting Zone" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10094" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Business Matching Programme" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10095" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Opening Ceremony" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10096" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Networking Night" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10097" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Overseas Buyer And VIP Lounge" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10098" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Key Dignitaries And Important Visitations" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "10099" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Country Pavilions" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "100910" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="International Road Shows" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+                <list-row backgroundColor = "#ffffff" action = "100911" imageLeft="" imageLeftHeight="20" imageLeftWidth="20" text="Thailand SSL" textColor = "#000000" textSize = "18" textStyle = "Arial" imageRight="arrow" imageRightHeight="20" imageRightWidth="20" iPh_isClickable = "1" iPh_hasAccessory = "1">
+                </list-row>
+			</section>
+		</list-view>
+    </screen>
+    
+    <screen id = "10091" hasTitle="true" title = "LED Application Zones: Mock Up Rooms" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/application-zones.html</url>
+		</web-view>
+    </screen>
+    
+    <screen id = "10092" hasTitle="true" title = "Modern Lamp Design Contest" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/modern-lamp-design-contest.html</url>
+		</web-view>
+    </screen>
+    <screen id = "10093" hasTitle="true" title = "Decorative Lighting Zone" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/decorative-lighting-zone.html</url>
+		</web-view>
+    </screen>
+    <screen id = "10094" hasTitle="true" title = "Business Matching Programme" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/business-matching-program.html</url>
+		</web-view>
+    </screen>
+    <screen id = "10095" hasTitle="true" title = "Opening Ceremony" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/opening-ceremony.html</url>
+		</web-view>
+    </screen>
+    <screen id = "10096" hasTitle="true" title = "Networking Night" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/networking-night.html</url>
+		</web-view>
+    </screen>
+    <screen id = "10097" hasTitle="true" title = "Overseas Buyer And VIP Lounge" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/overseas-buyer.html</url>
+		</web-view>
+    </screen>
+    <screen id = "10098" hasTitle="true" title = "Key Dignitaries And Important Visitations" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/key-dignitaries.html</url>
+		</web-view>
+    </screen> 
+    <screen id = "10099" hasTitle="true" title = "Country Pavilions" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/country-pavilions.html</url>
+		</web-view>
+    </screen>
+    <screen id = "100910" hasTitle="true" title = "International Road Shows" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/international-road-shows.html</url>
+		</web-view>
+    </screen>
+    
+    <screen id = "100911" hasTitle="true" title = "Thailand SSL" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#1244ad" backgroundColor = "#dedede" backgroundImg = "" templateId = "14" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#7a3218" backButtonTitle = "Back">
+			<navigation-item type = "1" action = "" />
+		</navigation-bar>
+		<web-view>	BrowserView
+			<url>html/thailand-ssl.html</url>
+		</web-view>
+    </screen>
+    
+
+    <!-- *********** Show Highlights End ********** -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <screen id = "2301" hasTitle="true" title = "Send Meeting Request" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#bb0000" backgroundColor = "" backgroundImg = "default" templateId = "36" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#B82326" backButtonTitle = "Back">
+			<!--<navigation-item type = "1" action = "" />-->
+		</navigation-bar>
+    </screen>
+    
+    <screen id = "2302" hasTitle="true" title = "Add to Favorites" titlebackgroundImage = "" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor = "#bb0000" backgroundColor = "" backgroundImg = "default" templateId = "31" hasMenu="false" hasNavigationBar = "1">
+        <navigation-bar color = "#B82326" backButtonTitle = "Back">
+			<!--<navigation-item type = "1" action = "" />-->
+		</navigation-bar>
+    </screen>
+    
+    
+   <screen id="2200" hasTitle="true" title="Detail" titlebackgroundImage="" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor="#7a3218" backgroundColor="" backgroundImg="" templateId="15" hasMenu="false">
+	    <navigation-bar color = "#B82326" backButtonTitle = "Back">
+	                <!--<navigation-item type = "1" action = "" />-->
+	    </navigation-bar>
+	 <detail-view>    
+	    <image url="" height="100" width="100" gravity="left"/>
+	    <text-view textsize="18" textcolor="#000000" textstyle="" backgroundColor="" text="" tag="Name"/>
+	    <text-view textsize="12" textcolor="#000000" textstyle="" backgroundColor="" text="" tag="Designation"/>
+	    <text-view textsize="12" textcolor="#000000" textstyle="" backgroundColor="" text="" tag="Company"/>
+	    <text-view textsize="16" textcolor="#000000" textstyle="" backgroundColor="" text="" tag="Description"/>
+	    <button width = "200" height = "55" image = "button" action = "2301" textColor = "#ffffff" gravity="center" paddingTop="10">Send Meeting Request</button>
+     </detail-view>
+  </screen> 
+  
+   <screen id="2201" hasTitle="true" title="Speaker Detail" titlebackgroundImage="" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor="#7a3218" backgroundColor="" backgroundImg="" templateId="20" hasMenu="false">
+	    <navigation-bar color = "#B82326" backButtonTitle = "Back">
+	                <!--<navigation-item type = "1" action = "" />-->
+	    </navigation-bar>
+	 <detail-view>    
+	    <image url="" height="100" width="100" gravity="left"/>
+	    <text-view textsize="18" textcolor="#000000" textstyle="" backgroundColor="" text="" tag="Name"/>
+	    <text-view textsize="12" textcolor="#000000" textstyle="" backgroundColor="" text="" tag="Designation"/>
+	    <text-view textsize="12" textcolor="#000000" textstyle="" backgroundColor="" text="" tag="Company"/>
+	    <text-view textsize="16" textcolor="#000000" textstyle="" backgroundColor="" text="" tag="Description"/>
+	    <button width = "200" height = "55" image = "button" action = "2301" textColor = "#ffffff" gravity="center" paddingTop="10">Send Meeting Request</button>
+     </detail-view>
+  </screen> 
+  <screen id="2202" hasTitle="true" title="Schedule Detail" titlebackgroundImage="" titleTextSize="18" titleColor="#FFFFFF" titleBackgroundColor="#7a3218" backgroundColor="" backgroundImg="" templateId="21" hasMenu="false">
+	    <navigation-bar color = "#B82326" backButtonTitle = "Back">
+	                <!--<navigation-item type = "1" action = "" />-->
+	    </navigation-bar>
+	 <detail-view>    
+	    <image url="" height="100" width="100" gravity="left"/>
+	    <text-view textsize="18" textcolor="#000000" textstyle="" backgroundColor="" text="" tag="Name"/>
+	    <text-view textsize="12" textcolor="#000000" textstyle="" backgroundColor="" text="" tag="Designation"/>
+	    <text-view textsize="12" textcolor="#000000" textstyle="" backgroundColor="" text="" tag="Company"/>
+	    <text-view textsize="16" textcolor="#000000" textstyle="" backgroundColor="" text="" tag="Description"/>
+	    <button width = "200" height = "55" image = "button" action = "2301" textColor = "#ffffff" gravity="center" paddingTop="10">Send Meeting Request</button>
+     </detail-view>
+  </screen> 
+  
+</event>

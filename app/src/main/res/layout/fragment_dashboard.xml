@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gridViewLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/facebookButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/dashboard_facebookbutton_margin_left" />
+
+    <TextView
+        android:id="@+id/marqueeWebView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="There is differ various from marquee, namely when computer mouse is reside in the marquee area the object will stop and when computer mouse in re-shifting to the other place the object will moving again. To make this effect only adding a few code at the marquee code."
+        android:textColor="#000000"
+        android:textSize="@dimen/dashboard_marquee_textsize"
+        android:visibility="gone" >
+    </TextView>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/marqueeWebView" >
+    </GridView>
+
+</RelativeLayout>
