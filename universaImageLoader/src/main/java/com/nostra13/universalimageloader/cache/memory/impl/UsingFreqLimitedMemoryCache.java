@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2011-2013 Sergey Tarasevich
+ * Copyright 2011-2014 Sergey Tarasevich
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 package com.nostra13.universalimageloader.cache.memory.impl;
 
 import android.graphics.Bitmap;
+
 import com.nostra13.universalimageloader.cache.memory.LimitedMemoryCache;
 
 import java.lang.ref.Reference;
@@ -37,7 +38,7 @@ import java.util.Set;
  * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)
  * @since 1.0.0
  */
-public class UsingFreqLimitedMemoryCache extends LimitedMemoryCache<String, Bitmap> {
+public class UsingFreqLimitedMemoryCache extends LimitedMemoryCache {
 	/**
 	 * Contains strong references to stored objects (keys) and last object usage date (in milliseconds). If hard cache
 	 * size will exceed limit then object with the least frequently usage is deleted (but it continue exist at
@@ -73,12 +74,12 @@ public class UsingFreqLimitedMemoryCache extends LimitedMemoryCache<String, Bitm
 	}
 
 	@Override
-	public void remove(String key) {
+	public Bitmap remove(String key) {
 		Bitmap value = super.get(key);
 		if (value != null) {
 			usingCounts.remove(value);
 		}
-		super.remove(key);
+		return super.remove(key);
 	}
 
 	@Override

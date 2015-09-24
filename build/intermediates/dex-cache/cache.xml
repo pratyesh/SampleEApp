@@ -2,81 +2,81 @@
 <items version="2" >
 
     <item
-        jar="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
-        <dex dex="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\pre-dexed\debug\classes-983d6e01f5c8f33fdddff2b98785df002bb9067c.jar" />
-    </item>
-    <item
-        jar="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-3e9110dca15b3d3089b84a73d2084ea610181e98.jar" />
-    </item>
-    <item
-        jar="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\libs\crouton-1.8.5.jar"
+        jar="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/libs/crouton-1.8.5.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="f085933fd4fad9693229d105d6d6d01fa90bb599">
-        <dex dex="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\pre-dexed\debug\crouton-1.8.5-ba5748dcca1f87a41df972cf014f309a19d6da8a.jar" />
+        <dex dex="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/pre-dexed/free/debug/crouton-1.8.5-2d03d9d8287bbe5c5d021c122c91387f60dbac50.jar" />
     </item>
     <item
-        jar="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\exploded-aar\SaturnmobiEApp_LEDExpo\universaImageLoader\unspecified\jars\classes.jar"
+        jar="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="bb632d91c250f9efd46cef0a878cb871e9be4447">
-        <dex dex="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\pre-dexed\debug\classes-187f5225136b67959ceffbb6c3adf58634fa951b.jar" />
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/pre-dexed/free/debug/classes-a9697b033a29f6703cc806712a51649be450465f.jar" />
     </item>
     <item
-        jar="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
-        <dex dex="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\pre-dexed\debug\classes-9a2d196f9eb433e641efc2a0a7cef28e9e96090a.jar" />
-    </item>
-    <item
-        jar="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\libs\PdfViewer.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="a53b4c813e4237286bd10f0c334c46e894970666">
-        <dex dex="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\pre-dexed\debug\PdfViewer-facd03eefa42ac0f6357319afa74a368bb774646.jar" />
-    </item>
-    <item
-        jar="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\jars\classes.jar"
+        jar="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
-        <dex dex="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\pre-dexed\debug\classes-713ceb025651afc483a82e53e06e5d0adbb4e5a1.jar" />
+        <dex dex="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/pre-dexed/free/debug/classes-6c2e38d3dbd51f29baff4cec777153b038f8ad34.jar" />
     </item>
     <item
-        jar="D:\android setup\android\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.0-efcea875ea49308c7565e9cafc9faef8dd530fea.jar" />
-    </item>
-    <item
-        jar="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.8.0\jars\classes.jar"
+        jar="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="cb6fab7a71fa9ec1f483d44c5fca65ab469d8aca">
-        <dex dex="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\pre-dexed\debug\classes-60321716007c693a59461dfb2dddd64289569e3d.jar" />
+        <dex dex="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/pre-dexed/free/debug/classes-d4b302d3c5fd8619352286306f96570546a5a825.jar" />
     </item>
     <item
-        jar="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\jars\classes.jar"
+        jar="/home/pratyesh/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/pre-dexed/free/debug/support-annotations-23.0.1-e2d2301bdd47e89d292ce9dde5a9f1d868869087.jar" />
+    </item>
+    <item
+        jar="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.8.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
-        <dex dex="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\pre-dexed\debug\classes-0dc0271a5c77c0e1912dc4be9701f68bc712b392.jar" />
+        <dex dex="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/pre-dexed/free/debug/classes-4da71d9fbdda98119847f699dae10984554bf9c7.jar" />
     </item>
     <item
-        jar="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\libs\FlurryAnalytics-4.2.0.jar"
+        jar="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/libs/PdfViewer.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="a53b4c813e4237286bd10f0c334c46e894970666">
+        <dex dex="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/pre-dexed/free/debug/PdfViewer-31027f56bfc9c4a12085270fa7606ac1d7d4c040.jar" />
+    </item>
+    <item
+        jar="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/pre-dexed/free/debug/internal_impl-23.0.1-1d0a9e70ca0443fc06daf0c8696bc73cad65e71d.jar" />
+    </item>
+    <item
+        jar="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/exploded-aar/SaturnmobiEApp_LEDExpo/universaImageLoader/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1c1eadff779116f56dfa6e0dbca74cabefa213bd">
+        <dex dex="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/pre-dexed/free/debug/classes-63a096fdeec8b2f979fad96a52bae617fdfac610.jar" />
+    </item>
+    <item
+        jar="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/libs/FlurryAnalytics-4.2.0.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="39e06eb3e9363f82173d8b1c8ebc2d763486dce5">
-        <dex dex="D:\AndroidStudioProjects\Led project\SaturnmobiEApp_LEDExpo\app\build\intermediates\pre-dexed\debug\FlurryAnalytics-4.2.0-2b4df7692e1b3598511063f3b83f3a59dbd9c2f1.jar" />
+        <dex dex="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/pre-dexed/free/debug/FlurryAnalytics-4.2.0-3f920a01d27e26900a5df239f1114fe3ec62d98b.jar" />
+    </item>
+    <item
+        jar="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/home/pratyesh/Downloads/testing content sample/SaturnmobiEApp_LEDExpo/app/build/intermediates/pre-dexed/free/debug/classes-9b6c3e9cf3ff778f9d0ac10327a82d0480d2bbd8.jar" />
     </item>
 
 </items>

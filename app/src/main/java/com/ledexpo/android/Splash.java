@@ -37,6 +37,7 @@ import android.util.Log;
 import android.view.Window;
 import android.widget.ProgressBar;
 import android.widget.RemoteViews;
+import android.widget.Toast;
 
 import com.flurry.android.FlurryAgent;
 import com.ledexpo.android.R;
@@ -46,8 +47,12 @@ import com.prt.app.api.HTTP_ApiRequest;
 import com.prt.app.db.ExecutionQuery;
 import com.prt.app.parser.JsonParser;
 import com.prt.app.parser.TemplateParser;
+import com.prt.app.services.DBUpdateService;
 import com.prt.app.util.Constants;
 import com.prt.app.util.Utility;
+
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 /**
  * @author Pratyesh Singh
@@ -63,7 +68,8 @@ public class Splash extends AppCompatActivity {
 
     protected void onMessage(Context context, Intent data) {
         String message = data.getStringExtra("payload");
-
+        if (message == null)
+            return;
         // int event_id = data.getIntExtra("event_id", 6);
         // int notification_id = data.getIntExtra("notification_id", 0);
         // String time = data.getStringExtra("time");
@@ -123,14 +129,47 @@ public class Splash extends AppCompatActivity {
         notification.defaults |= Notification.DEFAULT_VIBRATE;
         notificationManager.notify(0, notification);
     }
+
+
+    private void init() {
+        try {
+            SharedPreferences sf = getSharedPreferences("saturn_mobi_app", Context.MODE_PRIVATE);
+            boolean dbflag = sf.getBoolean("copy_db", false);
+            if (!dbflag) {
+                Utility.copyAssets(Splash.this, "saturnmobi.sqlite", "copy_db");
+            }
+
+            dbflag = sf.getBoolean("html_db", false);
+            if (!dbflag) {
+                Utility.copyAssets(Splash.this, "html.zip", "html_db");
+                String outFileName = "/data/data/" + getPackageName() + "/databases/" + "html.zip";
+                Utility.extractZip(outFileName);
+                /**** ----------Here setting default values for banner and html contents--------------------- **/
+                if (true) {
+                    Editor ed = sf.edit();
+                    ed.putInt("event_version", 1);
+                    ed.putInt("html_version", 1);
+                    ed.putInt("banner_version", 1);
+                    ed.commit();
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.activity_splash);
+
+        init();
+
 
         mRegistrationBroadcastReceiver = new BroadcastReceiver() {
             @Override
@@ -138,7 +177,7 @@ public class Splash extends AppCompatActivity {
                 SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
                 boolean sentToken = sharedPreferences.getBoolean(QuickstartPreferences.SENT_TOKEN_TO_SERVER, false);
                 if (sentToken) {
-                    onMessage(context,intent);
+                    onMessage(context, intent);
                     System.out.println(getString(R.string.gcm_send_message));
                 } else {
                     System.out.println(getString(R.string.token_error_message));
@@ -148,7 +187,7 @@ public class Splash extends AppCompatActivity {
 
         if (checkPlayServices()) {
             // Start IntentService to register this application with GCM.
-            Intent intent = new Intent(this, RegistrationIntentService.class);
+            Intent intent = new Intent(Splash.this, RegistrationIntentService.class);
             startService(intent);
         }
 
@@ -192,34 +231,11 @@ public class Splash extends AppCompatActivity {
 
                 @Override
                 public void run() {
-                    try {
-                        SharedPreferences sf = getSharedPreferences("saturn_mobi_app", Context.MODE_PRIVATE);
-                        boolean dbflag = sf.getBoolean("copy_db", false);
-                        if (!dbflag) {
-                            Utility.copyAssets(Splash.this, "saturnmobi.sqlite", "copy_db");
-                        }
 
-                        dbflag = sf.getBoolean("html_db", false);
-                        if (!dbflag) {
-                            Utility.copyAssets(Splash.this, "html.zip", "html_db");
-                            String outFileName = "/data/data/" + getPackageName() + "/databases/" + "html.zip";
-                            Utility.extractZip(outFileName);
-                            /**** ----------Here setting default values for banner and html contents--------------------- **/
-                            if (true) {
-                                Editor ed = sf.edit();
-                                ed.putInt("event_version", 1);
-                                ed.putInt("html_version", 1);
-                                ed.putInt("banner_version", 1);
-                                ed.commit();
-                            }
-                        }
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
 
                     if (Utility.checkInternetConnection(Splash.this)) {
-                        startService(new Intent("com.prt.app.services.ledexpo.DBUpdateService"));
+//                        startService(new Intent("com.prt.app.services.ledexpo.DBUpdateService"));
+                        startService(new Intent(Splash.this, DBUpdateService.class));
                     }
 
                     if (dialog.isShowing())
@@ -239,7 +255,7 @@ public class Splash extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver,new IntentFilter(QuickstartPreferences.REGISTRATION_COMPLETE));
+        LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver, new IntentFilter(QuickstartPreferences.REGISTRATION_COMPLETE));
     }
 
     @Override
@@ -257,7 +273,7 @@ public class Splash extends AppCompatActivity {
         int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
         if (resultCode != ConnectionResult.SUCCESS) {
             if (GooglePlayServicesUtil.isUserRecoverableError(resultCode)) {
-                GooglePlayServicesUtil.getErrorDialog(resultCode, this,PLAY_SERVICES_RESOLUTION_REQUEST).show();
+                GooglePlayServicesUtil.getErrorDialog(resultCode, this, PLAY_SERVICES_RESOLUTION_REQUEST).show();
             } else {
                 Log.i(TAG, "This device is not supported.");
                 finish();

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2011-2013 Sergey Tarasevich
+ * Copyright 2011-2014 Sergey Tarasevich
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 package com.nostra13.universalimageloader.core.display;
 
 import android.graphics.Bitmap;
+
 import com.nostra13.universalimageloader.core.assist.LoadedFrom;
 import com.nostra13.universalimageloader.core.imageaware.ImageAware;
 
@@ -38,7 +39,6 @@ public interface BitmapDisplayer {
 	 * @param imageAware {@linkplain com.nostra13.universalimageloader.core.imageaware.ImageAware Image aware view} to
 	 *                   display Bitmap
 	 * @param loadedFrom Source of loaded image
-	 * ImageAware}
 	 */
 	void display(Bitmap bitmap, ImageAware imageAware, LoadedFrom loadedFrom);
 }

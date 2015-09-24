@@ -3,35 +3,55 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 23
     buildToolsVersion '23.0.0'
-
     defaultConfig {
         applicationId "com.ledexpo.android"
-        minSdkVersion 14
+        minSdkVersion 9
         targetSdkVersion 23
         compileOptions {
             sourceCompatibility JavaVersion.VERSION_1_7
             targetCompatibility JavaVersion.VERSION_1_7
         }
     }
-
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles 'proguard-project.txt'
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            renderscriptOptimLevel 5
+            pseudoLocalesEnabled true
+            zipAlignEnabled true
+        }
+        debug {
+            debuggable true
+            jniDebuggable true
+            renderscriptDebuggable true
+            minifyEnabled false
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
         }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
+    productFlavors {
+        free {
+            applicationId 'com.ledexpo.android.free'
+        }
+        paid {
+            applicationId 'com.ledexpo.android.paid'
+        }
+    }
 }
 
 dependencies {
-    compile 'com.google.android.gms:play-services-maps:7.8.0'
-    compile 'com.android.support:appcompat-v7:23.0.0'
-    compile 'com.google.android.gms:play-services-gcm:7.8.0'
     compile files('libs/crouton-1.8.5.jar')
     compile files('libs/FlurryAnalytics-4.2.0.jar')
     compile files('libs/PdfViewer.jar')
     compile project(':universaImageLoader')
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.google.android.gms:play-services-maps:7.8.0'
+    compile 'com.google.android.gms:play-services-gcm:7.8.0'
 }
