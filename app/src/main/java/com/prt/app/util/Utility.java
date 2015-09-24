@@ -29,7 +29,6 @@ import android.os.Environment;
 import android.os.StatFs;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
@@ -67,7 +66,7 @@ public class Utility {
 
 			break;
 		case 10:
-			startAction((ActionBarActivity) fragment.getActivity(), templateId, action, bundle);
+			startAction((AppCompatActivity) fragment.getActivity(), templateId, action, bundle);
 
 			break;
 		case 11:
@@ -83,7 +82,7 @@ public class Utility {
 			break;
 		case 13:
 			/**** --this is for camera action- */
-			startAction((ActionBarActivity) fragment.getActivity(), templateId, action, bundle);
+			startAction((AppCompatActivity) fragment.getActivity(), templateId, action, bundle);
 			break;
 		case 14:
 			WebFragment webFragment = new WebFragment();
