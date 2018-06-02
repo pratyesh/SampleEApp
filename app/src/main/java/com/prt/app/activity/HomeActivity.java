@@ -1,15 +1,11 @@
 package com.prt.app.activity;
 
-import java.util.ArrayList;
-
 import android.app.ActionBar.LayoutParams;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -21,16 +17,16 @@ import android.widget.ImageView;
 
 import com.flurry.android.FlurryAgent;
 import com.ledexpo.android.R;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.prt.app.bean.BannerBean;
 import com.prt.app.bean.EventBean;
 import com.prt.app.db.ExecutionQuery;
 import com.prt.app.fragment.WebFragment;
 import com.prt.app.fragment_basecontroller.BaseControllerFragment;
 import com.prt.app.util.Constants;
+import com.prt.app.util.ImageUtil;
 import com.prt.app.util.Utility;
+
+import java.util.ArrayList;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
@@ -104,13 +100,6 @@ public class HomeActivity extends AppCompatActivity implements OnClickListener {
 			final ArrayList<BannerBean> bannerList = executionQuery.getBanners();
 			executionQuery.closeDatabase();
 
-			/**** -------------------- **/
-			final ImageLoader imageLoader = ImageLoader.getInstance();
-			final DisplayImageOptions options = new DisplayImageOptions.Builder().showImageOnLoading(R.drawable.add).showImageForEmptyUri(R.drawable.add).showImageOnFail(R.drawable.add).cacheOnDisc(true)
-					.bitmapConfig(Bitmap.Config.RGB_565).considerExifParams(true).build();
-			imageLoader.init(ImageLoaderConfiguration.createDefault(this));
-			/**** -------------------- **/
-
 			final ImageView banner_view = (ImageView) findViewById(R.id.banner_view);
 			banner_view.setOnClickListener(new View.OnClickListener() {
 
@@ -128,7 +117,7 @@ public class HomeActivity extends AppCompatActivity implements OnClickListener {
 				}
 			});
 
-			imageLoader.displayImage(bannerList.get(0).getBanner_url(), banner_view, options);
+			ImageUtil.getInstance().loadImage(bannerList.get(0).getBanner_url(), banner_view);
 
 			handler.removeCallbacks(runnable);
 			runnable = new Runnable() {
@@ -139,7 +128,7 @@ public class HomeActivity extends AppCompatActivity implements OnClickListener {
 					i++;
 					if (i >= bannerList.size())
 						i = 0;
-					imageLoader.displayImage(bannerList.get(i).getBanner_url(), banner_view, options);
+					ImageUtil.getInstance().loadImage(bannerList.get(i).getBanner_url(), banner_view);
 					handler.postDelayed(this, Integer.parseInt(bannerList.get(i).getTime()));
 				}
 			};

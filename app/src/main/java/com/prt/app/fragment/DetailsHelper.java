@@ -1,20 +1,11 @@
 package com.prt.app.fragment;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
@@ -34,11 +25,6 @@ import android.widget.Toast;
 
 import com.flurry.android.FlurryAgent;
 import com.ledexpo.android.R;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.FailReason;
-import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 import com.prt.app.activity.HomeActivity;
 import com.prt.app.adapter.LsitviewAdapter;
 import com.prt.app.bean.ExhibitorBean;
@@ -49,14 +35,21 @@ import com.prt.app.db.ExecutionQuery;
 import com.prt.app.fragment_basecontroller.BaseControllerFragment;
 import com.prt.app.util.Constants;
 import com.prt.app.util.IdentityConstant;
+import com.prt.app.util.ImageUtil;
 import com.prt.app.util.Utility;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
 
 public final class DetailsHelper extends Fragment {
-	ImageLoader imageLoader = ImageLoader.getInstance();
-	DisplayImageOptions options = null;
 
 	private static final String KEY_CONTENT = "TestFragment:Content";
 	private ExhibitorBean exhibitorBean;
@@ -100,10 +93,6 @@ public final class DetailsHelper extends Fragment {
 		if ((savedInstanceState != null) && savedInstanceState.containsKey(KEY_CONTENT)) {
 			exhibitorBean = savedInstanceState.getParcelable(KEY_CONTENT);
 		}
-
-		options = new DisplayImageOptions.Builder().showImageOnLoading(R.drawable.imagethumb).showImageForEmptyUri(R.drawable.imagethumb).showImageOnFail(R.drawable.imagethumb).cacheOnDisc(true)
-				.bitmapConfig(Bitmap.Config.RGB_565).considerExifParams(true).build();
-		imageLoader.init(ImageLoaderConfiguration.createDefault(getActivity()));
 	}
 
 	@Override
@@ -170,7 +159,7 @@ public final class DetailsHelper extends Fragment {
 			getView().findViewById(R.id.web_icon).setOnClickListener(onClickListener);
 			getView().findViewById(R.id.fev_icon_layout).setOnClickListener(onClickListener);
 			ImageView exhibitor_icon = (ImageView) getView().findViewById(R.id.exhibitor_icon);
-			imageLoader.displayImage(exhibitorBean.getImage(), exhibitor_icon, options);
+			ImageUtil.getInstance().loadImage(exhibitorBean.getImage(), exhibitor_icon);
 
 			if (exhibitorBean.getFavourites() == 0) {
 				ImageView imageView = (ImageView) getView().findViewById(R.id.fev_icon);
@@ -223,7 +212,7 @@ public final class DetailsHelper extends Fragment {
 			getView().findViewById(R.id.fev_icon_layout).setOnClickListener(onClickListener);
 
 			ImageView exhibitor_icon = (ImageView) getView().findViewById(R.id.exhibitor_icon);
-			imageLoader.displayImage(speakerBean.getImage(), exhibitor_icon, options);
+			ImageUtil.getInstance().loadImage(speakerBean.getImage(), exhibitor_icon);
 
 			if (speakerBean.getFavourites() == 0) {
 				ImageView imageView = (ImageView) getView().findViewById(R.id.fev_icon);
@@ -299,22 +288,7 @@ public final class DetailsHelper extends Fragment {
 			ImageView image = (ImageView) getView().findViewById(R.id.image);
 			// imageLoader.displayImage(image_gallery, image, options);
 			final ProgressBar spinner = (ProgressBar) getView().findViewById(R.id.loading);
-			imageLoader.displayImage(image_gallery, image, options, new SimpleImageLoadingListener() {
-				@Override
-				public void onLoadingStarted(String imageUri, View view) {
-					spinner.setVisibility(View.VISIBLE);
-				}
-
-				@Override
-				public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
-					spinner.setVisibility(View.GONE);
-				}
-
-				@Override
-				public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
-					spinner.setVisibility(View.GONE);
-				}
-			});
+			ImageUtil.getInstance().loadImage(image_gallery, image);
 		} else {
 			// TextView text = (TextView) getView().findViewById(R.id.textView1);
 			// text.setText(mContent);

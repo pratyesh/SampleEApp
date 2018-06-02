@@ -1,14 +1,7 @@
 package com.prt.app.adapter;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,23 +10,25 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ledexpo.android.R;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.prt.app.bean.ExhibitorBean;
 import com.prt.app.bean.ListRowBean;
 import com.prt.app.bean.NotificationBean;
 import com.prt.app.bean.ScheduleBean;
 import com.prt.app.bean.SpeakerBean;
 import com.prt.app.util.IdentityConstant;
+import com.prt.app.util.ImageUtil;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class LsitviewAdapter<T> extends BaseAdapter {
 
 	private Activity activity = null;
 	private LayoutInflater inflater = null;
 
-	ImageLoader imageLoader = ImageLoader.getInstance();
-	DisplayImageOptions options = null;
 	ArrayList<T> dataList;
 	int templateId;
 
@@ -42,15 +37,6 @@ public class LsitviewAdapter<T> extends BaseAdapter {
 		this.dataList = dataList;
 		this.templateId = templateId;
 		inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		if (templateId == IdentityConstant.GALLERY_FOLDERS_IMAGE.VALUE) {
-
-			options = new DisplayImageOptions.Builder().cacheOnDisc(true).bitmapConfig(Bitmap.Config.ALPHA_8).considerExifParams(true).build();
-		} else {
-
-			options = new DisplayImageOptions.Builder().showImageOnLoading(R.drawable.imagethumb).showImageForEmptyUri(R.drawable.imagethumb).showImageOnFail(R.drawable.imagethumb).cacheOnDisc(true)
-					.bitmapConfig(Bitmap.Config.ALPHA_8).considerExifParams(true).build();
-		}
-		imageLoader.init(ImageLoaderConfiguration.createDefault(activity.getBaseContext()));
 	}
 
 	public static class ViewHolder {
@@ -149,7 +135,7 @@ public class LsitviewAdapter<T> extends BaseAdapter {
 
 		} else if (templateId == IdentityConstant.GALLERY_FOLDERS_IMAGE.VALUE) {
 			String listRowBean = (String) item;
-			imageLoader.displayImage(listRowBean, ((ImageView) vi), options);
+			ImageUtil.getInstance().loadImage(listRowBean, ((ImageView) vi));
 
 		} else if (templateId != IdentityConstant.GALLERY_FOLDERS_IMAGE.VALUE && item instanceof String) {
 			String listRowBean = (String) item;
@@ -181,14 +167,14 @@ public class LsitviewAdapter<T> extends BaseAdapter {
 			holder.subTitleTextView.setText(listRowBean.getCountry());
 			holder.smallTextView.setText("Hall No: " + listRowBean.getHallNo() + " Booth No: " + listRowBean.getBoothNum());
 
-			imageLoader.displayImage(listRowBean.getImage(), holder.left_imageView, options);
+			ImageUtil.getInstance().loadImage(listRowBean.getImage(), holder.left_imageView);
 		} else if (item instanceof SpeakerBean) {
 			SpeakerBean listRowBean = (SpeakerBean) item;
 			holder.headerTextView.setText(listRowBean.getSpeakerName());
 			holder.subTitleTextView.setText(listRowBean.getDesignation());
 			holder.smallTextView.setText(listRowBean.getCompanyName());
 
-			imageLoader.displayImage(listRowBean.getImage(), holder.left_imageView, options);
+			ImageUtil.getInstance().loadImage(listRowBean.getImage(), holder.left_imageView);
 
 		}
 

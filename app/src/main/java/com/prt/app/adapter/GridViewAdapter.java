@@ -1,8 +1,5 @@
 package com.prt.app.adapter;
 
-import java.io.InputStream;
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
@@ -14,10 +11,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.prt.app.util.Constants;
 import com.ledexpo.android.R;
+import com.prt.app.util.Constants;
+
+import java.io.InputStream;
+import java.util.ArrayList;
 
 public class GridViewAdapter extends BaseAdapter {
 
@@ -25,8 +23,6 @@ public class GridViewAdapter extends BaseAdapter {
 	private LayoutInflater inflater = null;
 	private ArrayList<String> gridTextList = null;
 	private ArrayList<String> gridImageURLList = null;
-	ImageLoader imageLoader = ImageLoader.getInstance();
-	DisplayImageOptions options = null;
 	private ArrayList<String> gridTextColor = null;
 
 	public GridViewAdapter(Activity activity, ArrayList<String> gridTextList, ArrayList<String> gridImageURLList, ArrayList<String> gridTextColor) {

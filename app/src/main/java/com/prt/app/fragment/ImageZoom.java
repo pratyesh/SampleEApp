@@ -1,14 +1,5 @@
 package com.prt.app.fragment;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-
-import android.app.Activity;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -17,19 +8,14 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ledexpo.android.R;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.FailReason;
-import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 import com.prt.app.activity.HomeActivity;
 import com.prt.app.bean.ScreenBean;
 import com.prt.app.db.ExecutionQuery;
 import com.prt.app.util.IdentityConstant;
+import com.prt.app.util.ImageUtil;
 import com.prt.app.util.Utility;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
@@ -40,21 +26,12 @@ import de.keyboardsurfer.android.widget.crouton.Style;
  */
 public class ImageZoom extends Fragment {
 
-	private ImageLoader imageLoader = ImageLoader.getInstance();
-	private DisplayImageOptions options = null;
-
 	private ScreenBean screenBean;
 	public int action;
 	public int templateId;
 
 	String floor_name = "";
 
-	@Override
-	public void onAttach(Activity activity) {
-
-		super.onAttach(activity);
-
-	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -63,10 +40,6 @@ public class ImageZoom extends Fragment {
 
 		try {
 			Bundle bundle = getArguments();
-
-			options = new DisplayImageOptions.Builder().showImageOnLoading(R.drawable.imagethumb).showImageForEmptyUri(R.drawable.imagethumb).showImageOnFail(R.drawable.imagethumb).cacheOnDisc(true)
-					.bitmapConfig(Bitmap.Config.RGB_565).considerExifParams(true).build();
-			imageLoader.init(ImageLoaderConfiguration.createDefault(getActivity()));
 
 			floor_name = bundle.getString("floor_name");
 			this.action = bundle.getInt("linkedScreen");
@@ -136,22 +109,7 @@ public class ImageZoom extends Fragment {
 
 			// imageLoader.displayImage(image_url, image, options);
 			final ProgressBar spinner = (ProgressBar) getView().findViewById(R.id.loading);
-			imageLoader.displayImage(image_url, image, options, new SimpleImageLoadingListener() {
-				@Override
-				public void onLoadingStarted(String imageUri, View view) {
-					spinner.setVisibility(View.VISIBLE);
-				}
-
-				@Override
-				public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
-					spinner.setVisibility(View.GONE);
-				}
-
-				@Override
-				public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
-					spinner.setVisibility(View.GONE);
-				}
-			});
+			ImageUtil.getInstance().loadImage(image_url, image);
 		}
 	}
 

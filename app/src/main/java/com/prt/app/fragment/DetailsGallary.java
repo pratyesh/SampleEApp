@@ -1,10 +1,6 @@
 package com.prt.app.fragment;
 
-import java.util.ArrayList;
-
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -21,16 +17,14 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.ledexpo.android.R;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.FailReason;
-import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 import com.prt.app.activity.HomeActivity;
 import com.prt.app.adapter.DetailsHelperAdapter;
 import com.prt.app.bean.ScreenBean;
 import com.prt.app.db.ExecutionQuery;
 import com.prt.app.util.IdentityConstant;
+import com.prt.app.util.ImageUtil;
+
+import java.util.ArrayList;
 
 /**
  * @author Pratyesh Singh
@@ -39,23 +33,11 @@ public class DetailsGallary extends Fragment {
 	Bundle bundle;
 	int templateId;
 
-	ImageLoader imageLoader = ImageLoader.getInstance();
-	DisplayImageOptions options = null;
-
-	@Override
-	public void onAttach(Activity activity) {
-
-		super.onAttach(activity);
-		bundle = getArguments();
-	}
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
-		options = new DisplayImageOptions.Builder().showImageOnLoading(R.drawable.imagethumb).showImageForEmptyUri(R.drawable.imagethumb).showImageOnFail(R.drawable.imagethumb).cacheOnDisc(true)
-				.bitmapConfig(Bitmap.Config.RGB_565).considerExifParams(true).build();
-		imageLoader.init(ImageLoaderConfiguration.createDefault(getActivity()));
+		bundle = getArguments();
 	}
 
 	@Override
@@ -157,23 +139,7 @@ public class DetailsGallary extends Fragment {
 		View view = inflater.inflate(R.layout.item_pager_indicator_image, null);
 		ImageView image = (ImageView) view.findViewById(R.id.image);
 		final ProgressBar spinner = (ProgressBar) view.findViewById(R.id.loading);
-
-		imageLoader.displayImage(thumb_utl, image, options, new SimpleImageLoadingListener() {
-			@Override
-			public void onLoadingStarted(String imageUri, View view) {
-				spinner.setVisibility(View.VISIBLE);
-			}
-
-			@Override
-			public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
-				spinner.setVisibility(View.GONE);
-			}
-
-			@Override
-			public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
-				spinner.setVisibility(View.GONE);
-			}
-		});
+		ImageUtil.getInstance().loadImage(thumb_utl, image);
 		return view;
 	}
 

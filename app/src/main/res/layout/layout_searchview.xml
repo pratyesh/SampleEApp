@@ -11,8 +11,7 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:src="@drawable/abc_ic_search_api_mtrl_alpha" />
+        android:layout_marginRight="5dp"/>
 
     <EditText
         android:id="@+id/search_text"
@@ -29,7 +28,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/abc_ic_clear_mtrl_alpha"
         android:visibility="gone" />
 
 </RelativeLayout>
